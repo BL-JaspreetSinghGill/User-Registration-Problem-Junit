@@ -32,4 +32,9 @@ public class UserValidatorTest {
     public void givenFirstName_WhenLessThanMinLength_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validateFirstName("Ja"));
     }
+
+    @Test
+    public void givenFirstName_WhenContainsNumber_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validateFirstName("Jas1"));
+    }
 }
