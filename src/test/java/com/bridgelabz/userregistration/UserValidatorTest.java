@@ -19,6 +19,11 @@ public class UserValidatorTest {
     }
 
     @Test
+    public void givenFirstName_WhenProperWithMinLength_ShouldReturnTrue() {
+        Assert.assertTrue(userValidator.validateFirstName("Jas"));
+    }
+
+    @Test
     public void givenFirstName_WhenStartWithLowerCaseLetter_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validateFirstName("jaspreet"));
     }
