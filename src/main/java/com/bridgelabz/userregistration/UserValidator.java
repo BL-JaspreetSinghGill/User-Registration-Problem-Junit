@@ -6,9 +6,9 @@ public class UserValidator {
 
     private static final String NAME_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}$";
 
-    public boolean validateFirstName(String firstName) {
+    public boolean validateName(String name) {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
-        return pattern.matcher(firstName).matches();
+        return pattern.matcher(name).matches();
     }
 
 }
