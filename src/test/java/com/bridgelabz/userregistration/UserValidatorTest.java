@@ -37,4 +37,9 @@ public class UserValidatorTest {
     public void givenFirstName_WhenContainsNumber_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validateFirstName("Jas1"));
     }
+
+    @Test
+    public void givenFirstName_WhenContainsSpecialCharacter_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validateFirstName("J@s"));
+    }
 }
