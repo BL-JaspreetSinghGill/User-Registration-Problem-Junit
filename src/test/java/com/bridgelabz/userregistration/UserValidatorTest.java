@@ -111,4 +111,9 @@ public class UserValidatorTest {
         Assert.assertFalse(userValidator.validatePhoneNumber("91 98765432101"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenContainsMoreThanOneSpace_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validatePhoneNumber("91  9876543210"));
+    }
+
 }
