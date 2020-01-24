@@ -96,4 +96,9 @@ public class UserValidatorTest {
         Assert.assertFalse(userValidator.validatePhoneNumber("9 9876543210"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenCountryCodeIsGreaterThanSpecifiedDigit_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validatePhoneNumber("912 9876543210"));
+    }
+
 }
