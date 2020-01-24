@@ -13,6 +13,7 @@ public class UserValidatorTest {
         userValidator = new UserValidator();
     }
 
+    // FIRST NAME
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         Assert.assertTrue(userValidator.validateName("Jaspreet"));
@@ -43,6 +44,7 @@ public class UserValidatorTest {
         Assert.assertFalse(userValidator.validateName("J@s"));
     }
 
+    // LAST NAME
     @Test
     public void givenLastName_WhenProper_ShouldReturnTrue() {
         Assert.assertTrue(userValidator.validateName("Jaspreet"));
@@ -72,4 +74,11 @@ public class UserValidatorTest {
     public void givenLastName_WhenContainsSpecialCharacter_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validateName("J@s"));
     }
+
+    // PHONE NUMBER
+    @Test
+    public void givenPhoneNumber_WhenProper_ShouldReturnTrue() {
+        Assert.assertTrue(userValidator.validatePhoneNumber("91 9876543210"));
+    }
+
 }
