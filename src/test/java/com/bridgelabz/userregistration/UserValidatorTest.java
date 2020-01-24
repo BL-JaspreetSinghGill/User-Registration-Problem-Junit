@@ -126,4 +126,9 @@ public class UserValidatorTest {
         Assert.assertFalse(userValidator.validatePhoneNumber("91 987654321@"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenContainsAlphabet_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validatePhoneNumber("91 987654321a"));
+    }
+
 }
