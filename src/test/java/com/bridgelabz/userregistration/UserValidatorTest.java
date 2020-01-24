@@ -106,4 +106,9 @@ public class UserValidatorTest {
         Assert.assertFalse(userValidator.validatePhoneNumber("91 987654321"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenGreaterThanSpecifiedLength_ShouldReturnFalse() {
+        Assert.assertFalse(userValidator.validatePhoneNumber("91 98765432101"));
+    }
+
 }
