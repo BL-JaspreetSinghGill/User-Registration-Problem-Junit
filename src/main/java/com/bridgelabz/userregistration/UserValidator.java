@@ -6,7 +6,6 @@ public class UserValidator {
 
     private static final String NAME_PATTERN = "^[A-Z]{1}[a-zA-Z]{2,}$";
 
-//    private static final String PHONE_NUMBER_PATTERN = "^[6-9]{1}[0-9]{1}[[:space:]]{1}[0-9]{10}$";
     private static final String PHONE_NUMBER_PATTERN = "^[6-9]{1}[0-9]{1}[ ]{1}[0-9]{10}$";
 
     public boolean validateName(String name) {
