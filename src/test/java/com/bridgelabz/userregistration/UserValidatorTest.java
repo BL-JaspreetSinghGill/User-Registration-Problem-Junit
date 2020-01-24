@@ -92,12 +92,12 @@ public class UserValidatorTest {
     }
 
     @Test
-    public void givenPhoneNumber_WhenCountryCodeIsLessThanSpecifiedDigit_ShouldReturnFalse() {
+    public void givenPhoneNumber_WhenCountryCodeIsLessThanSpecifiedLength_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validatePhoneNumber("9 9876543210"));
     }
 
     @Test
-    public void givenPhoneNumber_WhenCountryCodeIsGreaterThanSpecifiedDigit_ShouldReturnFalse() {
+    public void givenPhoneNumber_WhenCountryCodeIsGreaterThanSpecifiedLength_ShouldReturnFalse() {
         Assert.assertFalse(userValidator.validatePhoneNumber("912 9876543210"));
     }
 
