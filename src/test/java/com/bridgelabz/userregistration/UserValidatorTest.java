@@ -81,4 +81,9 @@ public class UserValidatorTest {
         Assert.assertTrue(userValidator.validatePhoneNumber("91 9876543210"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenProperCountryCodeOfTwoDigit_ShouldReturnTrue() {
+        Assert.assertTrue(userValidator.validatePhoneNumber("82 9876543210"));
+    }
+
 }
