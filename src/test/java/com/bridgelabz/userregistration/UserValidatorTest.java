@@ -86,4 +86,9 @@ public class UserValidatorTest {
         Assert.assertTrue(userValidator.validatePhoneNumber("82 9876543210"));
     }
 
+    @Test
+    public void givenPhoneNumber_WhenCountryCodeFirstDigitIsWithinRange_ShouldReturnTrue() {
+        Assert.assertTrue(userValidator.validatePhoneNumber("64 9876543210"));
+    }
+
 }
